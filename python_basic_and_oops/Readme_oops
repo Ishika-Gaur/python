@@ -1,0 +1,385 @@
+Q. What is Object-Oriented Programming (OOP)?
+
+Answer:
+
+Object-Oriented Programming (OOP) is a programming paradigm that organizes code into objects. Objects contain attributes (data) and methods (functions). OOP helps write code that is modular, reusable, maintainable, and easy to manage, especially in large projects.
+
+Quick Revision
+
+Python me everything is an object.
+Object Class se banta hai.
+Class = Blueprint (Design).
+Object = Blueprint se bani actual cheez.
+Object ke Attributes (data) aur Methods (functions) hote hain.
+. (dot operator) se methods aur attributes access karte hain.
+OOP (Object-Oriented Programming) ek programming paradigm hai jo code ko objects me organize karta hai.
+OOP ka use bade projects (jaise Amazon, Netflix, etc.) me code ko clean, reusable aur maintainable banane ke liye kiya jata hai.
+
+
+
+
+--------------------
+
+oops part2
+
+-------------------
+
+Q1. What is a Class?
+
+A Class is a blueprint or template used to create objects.
+
+Q2. What is an Object?
+
+An Object is an instance of a class that contains data (attributes) and behavior (methods).
+
+Q3. What is Instantiation?
+
+Instantiation is the process of creating an object from a class.
+
+Quick Revision
+Paradigm = Code likhne ka style.
+Procedural Programming me code line by line execute hota hai.
+OOP me code ko real-world objects ki tarah organize kiya jata hai.
+Class = Blueprint / Template.
+Object (Instance) = Class se bani actual cheez.
+Instantiation = Class se object banana (ClassName()).
+Ek class se multiple objects ban sakte hain.
+Python class ka blueprint memory me ek hi baar store karta hai aur usi se naye objects create karta hai, isliye code reusable aur efficient banta hai.
+
+
+--------------------
+
+oops part3
+
+-------------------
+
+
+
+Q1. What is __init__()?
+
+__init__() is a special constructor method that is automatically called when an object is created. It is used to initialize object attributes.
+
+Q2. What is self?
+
+self is a reference to the current object (instance) of the class. It allows us to access the object's attributes and methods.
+
+Q3. Why do we write self.name = name?
+
+Because the parameter name is temporary, while self.name stores the value permanently inside the object.
+
+Q4. Difference between Attribute and Method?
+Attribute	           Method
+Stores data	          Performs action
+player.name          	player.run()
+No brackets           	Uses ()
+
+Quick Revision
+class blueprint hoti hai.
+__init__() constructor hai jo object create hote hi automatically call hota hai.
+self current object ko refer karta hai.
+
+
+
+
+--------------------
+
+oops part4
+
+-------------------
+
+
+
+
+2- help() Function
+
+Python me kisi bhi class ya object ki information dekhne ke liye help() function use hota hai.
+
+Syntax
+help(ClassName)
+
+Example
+help(list)
+
+Ya
+
+help(PlayerCharacter)
+
+Output me milta hai:
+
+Methods
+Attributes
+Documentation
+Class ki information
+
+📌 Use: Kisi class ke available methods aur documentation dekhne ke liye.
+
+
+3. Class Object Attribute (Static Attribute)
+
+Class ke andar aur __init__() ke bahar jo variable banta hai, use Class Object Attribute kehte hain.
+
+Example
+class PlayerCharacter:
+
+    membership = True
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+Yahan:
+
+membership = True
+
+ek Class Object Attribute hai.
+
+Features
+Sabhi objects ke liye same hota hai.
+Static value hoti hai.
+Memory me sirf ek baar store hota hai.
+Har object ise share karta hai.
+
+Access
+print(PlayerCharacter.membership)
+print(player1.membership)
+print(player2.membership)
+
+Output:
+
+True
+True
+True
+
+
+4. Instance Attribute (Object Attribute)
+
+Jo variables __init__() ke andar self ke saath bante hain, unhe Instance Attributes kehte hain.
+
+Example
+class PlayerCharacter:
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+Features
+Har object ke liye alag value hoti hai.
+Dynamic hote hain.
+Object create hone par bante hain.
+
+Example
+player1 = PlayerCharacter("Cindy", 44)
+player2 = PlayerCharacter("Tom", 21)
+
+Output:
+
+player1.name → Cindy
+player2.name → Tom
+
+
+
+
+--------------------
+
+oops part5
+
+-------------------
+
+
+
+2. Constructor Me Validation (Safeguards)
+
+Constructor me hum conditions laga sakte hain taaki sirf valid object hi create ho.
+
+Example
+class PlayerCharacter:
+
+    def __init__(self, name, age):
+
+        if age > 18:
+            self.name = name
+            self.age = age
+Explanation
+
+Yahan check ho raha hai:
+
+Age > 18 ?
+
+      │
+ ┌────┴────┐
+ │         │
+Yes       No
+ │         │
+Object   Object
+Created  Not Properly Created
+
+Agar age 18 se kam hogi to attributes (name, age) assign hi nahi honge.
+
+
+3. Default Parameters
+
+Constructor me default values bhi de sakte hain.
+
+Example
+class PlayerCharacter:
+
+    def __init__(self, name="Anonymous", age=0):
+        self.name = name
+        self.age = age
+
+Ab object bina arguments ke bhi ban sakta hai.
+
+player1 = PlayerCharacter()
+
+Output:
+
+name = Anonymous
+age = 0
+
+
+4. Validation Ka Effect
+
+Suppose:
+
+class PlayerCharacter:
+
+    def __init__(self, name="Anonymous", age=0):
+
+        if age > 18:
+            self.name = name
+            self.age = age
+
+    def shout(self):
+        print(self.name)
+
+Object:
+
+player1 = PlayerCharacter("Tom", 10)
+
+player1.shout()
+
+Output:
+
+AttributeError:
+'PlayerCharacter' object has no attribute 'name'
+Kyu?
+
+Kyuki:
+
+Age = 10
+
+↓
+
+Condition False
+
+↓
+
+self.name create nahi hua
+
+↓
+
+shout() ne self.name access kiya
+
+↓
+
+Error
+
+
+
+
+--------------------
+
+oops part6
+
+-------------------
+
+
+
+
+Q1. What is a Class Method?
+
+A Class Method is a method that belongs to the class instead of an object. It is created using the @classmethod decorator and receives cls as its first parameter.
+
+Q2. What is a Static Method?
+
+A Static Method is a method that does not access the class or object. It is created using the @staticmethod decorator.
+
+Q3. Difference Between self and cls?
+self → Refers to the current object (instance).
+cls → Refers to the current class.
+
+🔥 Quick Revision
+@classmethod class ke liye method banata hai.
+Class Method ka first parameter cls hota hai.
+Class Method ko object ke bina call kar sakte hain.
+Class Method se naye objects bhi create kiye ja sakte hain (cls()).
+@staticmethod ek normal utility function hota hai jo class ke andar likha jata hai.
+Static Method me na self hota hai aur na hi cls.
+
+
+
+----------------
+super()
+------------------
+
+
+Agar Child Class apna __init__() banati hai, to Parent ka __init__() automatically call nahi hota.
+Parent constructor ko call karne ke do tareeke hain:
+User.__init__(self, email)
+super().__init__(email) ✅ (Recommended)
+super() Parent Class ko refer karta hai.
+super() use karne se common initialization code dobara nahi likhna padta.
+Ye code ko clean, reusable aur maintainable banata hai.
+
+
+
+Why Use Dunder Methods?
+
+Ye methods hamari class ko Python ke built-in objects (list, dict, string, etc.) ki tarah behave karne ki ability dete hain.
+
+
+Important Dunder Methods
+Dunder Method	Use
+__init__()	Constructor
+__str__()	print() / String representation
+__len__()	len()
+__call__()	Object ko function ki tarah call karna
+__getitem__()	[] indexing/access
+__del__()	Object delete hone par call
+
+
+
+
+----------------
+part 7
+------------------
+
+Q1. What is MRO?
+
+Answer:
+
+MRO (Method Resolution Order) is the order in which Python searches for methods and attributes in an inheritance hierarchy.
+
+Q2. Why is MRO needed?
+
+Because in Multiple Inheritance, more than one parent class may contain the same method or attribute. MRO decides which one Python should use.
+
+Q3. How can we check MRO?
+ClassName.mro()
+
+or
+
+ClassName.__mro__
+Q4. What algorithm does Python use for MRO?
+
+Answer:
+
+Python uses the C3 Linearization Algorithm to determine the Method Resolution Order.
+
+🔥 Quick Revision
+MRO (Method Resolution Order) = Python ka search order for methods and attributes.
+MRO mainly Multiple Inheritance me important hota hai.
+Python conflicts ko MRO ke according resolve karta hai.
+MRO check karne ke liye ClassName.mro() ya ClassName.__mro__ use karte hain.
+Har class ka last parent object hota hai.
+Bahut complex inheritance code ko difficult bana deta hai, isliye Multiple Inheritance ka use carefully karna chahiye.

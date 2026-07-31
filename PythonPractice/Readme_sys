@@ -1,0 +1,50 @@
+sys ek built-in module hai jo Python Interpreter aur operating system se related information aur functionality provide karta hai.
+
+Iske through hum
+
+Command Line Arguments
+Python Version
+Exit Program
+System Path
+Memory Information
+
+jaise kaam kar sakte hain.
+
+----------|
+import sys|
+-----------|
+
+Bas itna likhte hi
+
+Python ka sys module available ho jata hai.
+
+
+
+What is sys.argv?
+Definition
+
+sys.argv command line se diye gaye arguments ki list hoti hai.
+
+argv ka matlab hai:
+****Argument Vector***
+
+Ye ek list hoti hai.
+
+* Suppose hum terminal se program chalana chahte hain aur uske saath kuch values bhejna chahte hain.
+
+Example
+
+python game.py 10 20
+
+Yahan
+
+10
+20
+
+command-line arguments hain.
+
+Python inhe
+
+sys.argv
+
+me store karta hai.

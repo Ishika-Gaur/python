@@ -1,0 +1,74 @@
+Generally format hota hai
+
+MAJOR.MINOR.PATCH
+
+Example
+
+2.5.1
+
+Isme
+
+2 → Major Version
+
+5 → Minor Version
+
+1 → Patch Version
+
+Meaning of Each Number
+
+1️⃣ Major Version
+
+Example
+
+2.0.0
+
+Iska matlab
+
+Bade changes
+Breaking changes
+Purana code toot bhi sakta hai
+
+Example
+
+1.x
+
+↓
+
+2.x
+
+Kabhi-kabhi pura API hi change ho jata hai.
+
+2️⃣ Minor Version
+
+Example
+
+2.5.0
+
+Matlab
+
+New Features
+Existing code mostly chalta rahega
+
+Example
+
+2.4
+
+↓
+
+2.5
+
+New functionality add hui.
+
+3️⃣ Patch Version
+
+Example
+
+2.5.1
+
+Sirf
+
+Bug Fix
+Security Fix
+Performance Improvement
+
+Koi major feature nahi.
