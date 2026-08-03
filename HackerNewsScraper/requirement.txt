@@ -1,0 +1,3 @@
+import requests          # Website se HTML download karne ke liye
+
+from bs4 import BeautifulSoup   # HTML ko parse (read) karne ke liye
