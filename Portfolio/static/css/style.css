@@ -1,0 +1,344 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Arial,sans-serif;
+
+    background:#0f172a;
+
+    color:white;
+
+    padding:0 50px;
+}
+
+/* Navbar */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 80px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#38bdf8;
+}
+
+
+.logo{
+
+    font-size:28px;
+
+    color:#38bdf8;
+}
+/* Hero */
+
+.hero{
+
+    height:80vh;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+}
+
+.hero h1{
+    font-size:60px;
+}
+
+.hero h3{
+    margin-top:20px;
+    color:#38bdf8;
+}
+
+.hero p{
+
+   max-width:600px;
+
+    margin:25px 0;
+
+    line-height:1.8;
+}
+
+button{
+
+    padding:14px 30px;
+
+    border:none;
+
+    background:#38bdf8;
+
+    color:white;
+
+    cursor:pointer;
+
+    border-radius:8px;
+
+    font-size:18px;
+}
+
+/* About Section */
+
+.about{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:60px;
+
+    padding:100px 0;
+}
+
+.about-text{
+
+    flex:1;
+}
+
+.about-text h2{
+
+    font-size:42px;
+
+    margin-bottom:25px;
+
+    color:#38bdf8;
+}
+
+.about-text p{
+
+    line-height:1.8;
+
+    margin-bottom:20px;
+
+    font-size:18px;
+}
+
+.about-image{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+}
+
+.about-image img{
+
+    width:320px;
+
+    border-radius:20px;
+}
+
+.projects{
+    padding:80px 50px;
+    text-align:center;
+}
+
+.projects h1{
+    font-size:45px;
+    color:#38bdf8;
+    margin-bottom:15px;
+}
+
+.projects p{
+    margin-bottom:30px;
+}
+
+.project-card{
+    background:#1e293b;
+    padding:25px;
+    margin:20px auto;
+    max-width:700px;
+    border-radius:12px;
+    transition:0.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.3);
+}
+
+.project-card h2{
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+
+/* ABOUT PAGE */
+
+.about{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:60px;
+    padding:80px 50px;
+    min-height:80vh;
+}
+
+.about-text{
+    flex:1;
+}
+
+.about-text h1{
+    font-size:48px;
+    color:#38bdf8;
+    margin-bottom:20px;
+}
+
+.about-text h2{
+    margin-top:35px;
+    margin-bottom:20px;
+    color:#38bdf8;
+}
+
+.about-text p{
+    line-height:1.8;
+    margin-bottom:18px;
+    font-size:18px;
+}
+
+.about-image{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.about-image img{
+    width:320px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-top:20px;
+}
+
+.skills span{
+    background:#38bdf8;
+    color:white;
+    padding:10px 18px;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.skills span:hover{
+    background:white;
+    color:#0f172a;
+}
+
+/* CONTACT PAGE */
+
+.contact{
+
+    max-width:700px;
+
+    margin:80px auto;
+
+    text-align:center;
+}
+
+.contact h1{
+
+    font-size:45px;
+
+    color:#38bdf8;
+
+    margin-bottom:20px;
+}
+
+.contact p{
+
+    margin-bottom:40px;
+
+    line-height:1.8;
+}
+
+.contact form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+}
+
+.contact input,
+.contact textarea{
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    outline:none;
+}
+
+.contact textarea{
+
+    resize:none;
+}
+
+.contact button{
+
+    width:200px;
+
+    margin:auto;
+
+    padding:15px;
+
+    border:none;
+
+    background:#38bdf8;
+
+    color:white;
+
+    font-size:18px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.contact button:hover{
+
+    background:white;
+
+    color:#0f172a;
+
+    transform:translateY(-3px);
+}

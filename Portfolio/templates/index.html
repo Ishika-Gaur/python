@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <link rel="stylesheet"
+      href="{{ url_for('static', filename='/css/style.css') }}">
+   <!-- Jinja template -->
+</head>
+<body>
+
+  {% extends "base.html" %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+
+    <h1>Hello, I'm Ishika 👋</h1>
+
+    <h3>Frontend Developer</h3>
+
+    <p>
+        I build responsive websites using Flask and React.
+    </p>
+
+</section>
+
+{% endblock %}
+
+
+    <section class="about">
+
+    <div class="about-text">
+
+        <h2>About Me</h2>
+
+        <p>
+            I'm a Computer Science student passionate about
+            frontend development and creating beautiful,
+            responsive websites using modern technologies.
+        </p>
+
+        <p>
+            Currently learning Flask, Python, React and Backend
+            Development.
+        </p>
+
+    </div>
+
+    <div class="about-image">
+
+        <img src="{{ url_for('static', filename='images/profile.png') }}"
+             alt="Profile">
+
+    </div>
+
+</section>
+
+</body>
+</html>
